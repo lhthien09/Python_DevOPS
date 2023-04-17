@@ -12,6 +12,9 @@ count_B = 0
 print(art.logo)
 x1 = random.choice(data)
 
+def display(a, b, c):
+     return f"{a}, {b}, {c}"
+
 def game_play(x1):
      global data, current_score
      data.remove(x1)
@@ -25,10 +28,11 @@ def game_play(x1):
         ***************************************
         ''')
         print(f"\nYou're right. Current score {current_score}.")
-     print(f'Compare A: {x1["name"]}, {x1["description"]}, {x1["country"]}.')
+     print('Compare A: ")
+     print(display(x1["name"], x1["description"], x1["country"]))
      print(art.vs)
-     print(f'Compare B: {x2["name"]}, {x2["description"]}, {x2["country"]}.')
-   
+     print('Compare B: ')
+     print(display(x2["name"], x2["description"], x2["country"]))
      choose = input("Who has more followers? Type 'A' or 'B': ")
      if count_A > count_B:
        answer = "A"
